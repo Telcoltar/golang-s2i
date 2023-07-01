@@ -1,5 +1,5 @@
 # golang-builder
-FROM golang:1.12
+FROM golang:1.20
 LABEL maintainer "Chris Collins <collins.christopher@gmail.com>"
 
 ENV CGO_ENABLED=0 \
