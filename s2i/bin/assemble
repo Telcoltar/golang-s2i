@@ -25,7 +25,7 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
 echo "---> Downloading dependencies..."
-go go mod download -x
+go mod download -x
 
 # The -o app is important, as we have set this in the 
 # s2i/bin/run script, allowing it to run whatever app was
