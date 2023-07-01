@@ -21,11 +21,15 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
   mv /tmp/artifacts/. ./
 fi
 
-echo "---> Installing application source..."
-cp -Rf /tmp/src/. ./
+echo "---> Copy go.mod go.sum ..."
+cp -f /tmp/src/go.mod ./
+cp -f /tmp/src/go.sum ./
 
 echo "---> Downloading dependencies..."
 go mod download -x
+
+echo "---> Copy go source ..."
+cp -f /tmp/src/*.go ./
 
 # The -o app is important, as we have set this in the 
 # s2i/bin/run script, allowing it to run whatever app was
