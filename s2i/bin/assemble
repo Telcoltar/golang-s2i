@@ -28,7 +28,7 @@ cp -f /tmp/src/go.sum ./
 echo "---> Downloading dependencies..."
 go mod download -x
 
-echo "---> Copy go source ..."
+echo "---> Copy go source code ..."
 cp -f /tmp/src/*.go ./
 
 # The -o app is important, as we have set this in the 
